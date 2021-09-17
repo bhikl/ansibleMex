@@ -1,0 +1,8 @@
+---
+- name: Shutodwn win
+  hosts: all_win
+
+  tasks:
+  - name: Shutdown via Powershel
+    ansible.windows.win_powershell:
+      script: shutdown -t 0
