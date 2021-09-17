@@ -1,5 +1,14 @@
-[ws258]
+[wsl258]
 wsl258-1
 
+
+
+[ws258]
+ws258-2
+
+
 [all_linux:children]
+wsl258
+
+[all_win:children]
 ws258
