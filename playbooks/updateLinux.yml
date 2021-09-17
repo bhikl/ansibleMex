@@ -1,0 +1,13 @@
+---
+- name: Update & Upgrade Linux
+  hosts: all_linux
+  become: yes
+  
+  tasks:
+
+  - name: Update 
+    apt:
+    update_cache: yes
+  - name: Upgrade 
+    apt:
+    upgrade: dist
