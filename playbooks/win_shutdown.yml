@@ -8,3 +8,8 @@
     ansible.windows.win_powershell:
       script: |
         shutdown -t 0
+    become: yes
+    become_method: runas
+    become_flags: logon_type=new_credentials logon_flags=netcredentials_only
+    vars:
+      ansible_become_user: PRIM\witcher
