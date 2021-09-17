@@ -5,6 +5,6 @@
 
   tasks:
   - name: Shutdown via Powershel
-    win_powershell:
+    ansible.windows.win_powershell:
       script: |
         shutdown -t 0
