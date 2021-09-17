@@ -4,10 +4,9 @@
   become: yes
   
   tasks:
-
   - name: Update 
     apt:
-    update_cache: yes
+      update_cache: yes
   - name: Upgrade 
     apt:
-    upgrade: dist
+      upgrade: dist
