@@ -1,0 +1,16 @@
+---
+- name: Install Python on Win
+  hosts: all_win
+
+  tasks:
+- name: Install Python 3.9 from a network share with specific credentials
+  ansible.windows.win_package:
+    path: \\T-server\prepod\_\distrib\python-3.9.7-amd64.exe
+    product_id: '{05903EEF-72A2-4C1A-AD35-41AD6C7094A8}'
+    arguments: /quiet InstallAllUsers=1 PrependPath=1
+    state: present
+  become: yes
+  become_method: runas
+  become_flags: logon_type=new_credential logon_flags=netcredentials_only
+  vars:
+    ansible_become_user: PRIM\witcher

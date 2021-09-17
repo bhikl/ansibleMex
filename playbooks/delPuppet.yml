@@ -1,0 +1,15 @@
+---
+- name: Delete Puppet
+  hosts: all_linux
+  become: yes
+  
+  tasks:
+  - name: Stop and Disable Puppet
+    service: 
+      name   : puppet 
+      state  : stopped 
+      enabled: no
+  - name: Delete Puppet files 
+    file:
+      name : /opt/puppetlabs
+      state: absent
