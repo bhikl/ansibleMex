@@ -6,7 +6,7 @@
   - name: Shutdown via Powershel
     ansible.windows.win_powershell:
       script: |
-        shutdown -t 0
+        shutdown /s
     become: yes
     become_method: runas
     become_flags: logon_type=new_credentials logon_flags=netcredentials_only
