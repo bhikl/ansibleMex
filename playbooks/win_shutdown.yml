@@ -1,7 +1,6 @@
 ---
 - name: Shutodwn win
   hosts: all_win
-  become: yes
 
   tasks:
   - name: Shutdown via Powershel
