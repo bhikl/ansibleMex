@@ -23,10 +23,27 @@ ws218-16
 [ws258]
 ws258-2
 
+[ws257]
+ws257-1
+ws257-2
+ws257-3
+ws257-4
+ws257-5
+ws257-6
+ws257-7
+ws257-8
+ws257-9
+ws257-10
+ws257-11
+ws257-12
+ws257-13
+ws257-14
+ws257-15
 
 [all_linux:children]
 wsl258
 
 [all_win:children]
+ws257
 ws258
 ws218
